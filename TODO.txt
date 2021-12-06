@@ -1,0 +1,19 @@
+https://github.com/jirkapinkas/online-skoleni-2021-19
+
+Nainstalovat:
+- IntelliJ Idea (mela by byt nainstalovana)
+- Docker Desktop
+- Total Commander
+- Visual Studio Code
+- Node JS (LTS)
+
+Stahnout:
+- Maven
+
+Rozvrh:
+start: 09:00
+break: 10:20 - 10:30
+obed:  11:25 - 12:25
+break: 14:00 - 14:10
+break: 15:00 - 15:05 (nekdy)
+konec: 16:00

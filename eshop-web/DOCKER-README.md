@@ -27,6 +27,7 @@ PRIKLAD 1 (Pomoci Dockerfile):
 
   mvn clean package
   docker build --tag eshopweb .
+  docker images
   docker run --rm -it -p 8080:8080 eshopweb
   
 PRIKLAD 2 (bez Dockerfile):

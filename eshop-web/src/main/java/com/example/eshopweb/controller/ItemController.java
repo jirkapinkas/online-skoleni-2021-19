@@ -15,8 +15,11 @@ import java.util.Optional;
 @RequestMapping("/item")
 public class ItemController {
 
-    @Autowired
-    private ItemService itemService;
+    private final ItemService itemService;
+
+    public ItemController(ItemService itemService) {
+        this.itemService = itemService;
+    }
 
     // http://localhost:8080/item
     @GetMapping

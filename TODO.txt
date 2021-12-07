@@ -22,3 +22,10 @@ konec: 16:00
 Proc (ne)pouzivat Kotlin:
 
 https://www.reddit.com/r/java/comments/ndwz92/can_i_get_some_reasons_to_use_java_instead_of/
+
+Idea Plugins:
+- SonarLint
+- Laconic POM
+- Maven Helper
+- Extra Icons
+- Grep Console (hezci logy)

@@ -1,0 +1,24 @@
+
+Instalace yarn:
+
+    npm i -g yarn
+
+Vytvoreni react aplikace:
+
+    npx create-react-app eshop-frontend
+
+Spusteni aplikace pro vyvoj:
+
+    yarn start
+
+Stazeni dependencies:
+
+    yarn
+
+Build aplikace pro produkci:
+
+    yarn build
+
+NPM vs YARN:
+
+- https://shift.infinite.red/npm-vs-yarn-cheat-sheet-8755b092e5cc

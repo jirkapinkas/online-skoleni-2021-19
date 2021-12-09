@@ -8,7 +8,7 @@ function ItemList() {
     const [data, setData] = useState(initialData);
   
     const loadData = () => {
-        axios.get('http://localhost:8080/item')
+        axios.get(process.env.REACT_APP_API_URL + '/item')
             .then(response => {
                 // console.log(response.data);
                 setData(response.data);

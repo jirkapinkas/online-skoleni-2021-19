@@ -4,7 +4,7 @@
 // import {Stuff} from './util/Util'
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { v4 as uuidv4 } from 'uuid';+
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   return (

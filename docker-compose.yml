@@ -12,7 +12,35 @@ services:
   app:
     build:
       context: ./eshop-web
-    ports:
-      - "8080:8080"
+    # ports:
+    #   - "8080:8080"
     environment:
       - "SPRING_PROFILES_ACTIVE=test"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`frontend.localhost`) && PathPrefix(`/api/`)"
+      - "traefik.http.middlewares.backendpathstrip.stripprefix.prefixes=/api"
+      - "traefik.http.routers.backend.middlewares=backendpathstrip@docker"
+      - "traefik.http.routers.backend.entrypoints=web"
+      - "traefik.http.services.backend.loadbalancer.server.port=8080"
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - "./eshop-frontend/build/:/usr/share/nginx/html/"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`frontend.localhost`) && PathPrefix(`/`)"
+      - "traefik.http.routers.frontend.entrypoints=web"
+  traefik:
+    image: "traefik:v2.5"
+    container_name: "traefik"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"

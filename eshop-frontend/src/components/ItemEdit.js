@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-function ItemEdit() {
+function ItemEdit(props) {
 
     const [name, setName] = useState('');
     const [price, setPrice] = useState(0);
@@ -22,7 +22,10 @@ function ItemEdit() {
             name : name,
             price : price
         }).then(response => {
-            console.log("sent to server");
+            // console.log("sent to server");
+            setName('');
+            setPrice(0);
+            props.onSave();
         })
     }
 

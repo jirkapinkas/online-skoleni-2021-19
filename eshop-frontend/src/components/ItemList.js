@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Item from "./Item";
+import ItemEdit from "./ItemEdit";
 
 function ItemList() {
 
@@ -57,6 +58,7 @@ function ItemList() {
             {/* {data.map(function(item) { return <Item /> })}
             {data.map(itemFunction)}
             {itemListMapperFunction} */}
+            <ItemEdit onSave={loadData} />
         </div>
     )
 }

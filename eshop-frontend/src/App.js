@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { v4 as uuidv4 } from 'uuid';
 import ItemList from './components/ItemList';
+import ItemEdit from './components/ItemEdit';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <header className="App-header">
         <Header />
         <ItemList />
+        <ItemEdit />
           {uuidv4()}
         <Footer fromDate={2000} toDate={2021} />
       </header>

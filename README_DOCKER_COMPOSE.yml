@@ -1,0 +1,14 @@
+Je zapotrebi mit nainstalovane:
+
+- Docker
+- Java (musi byt nastavena cesta JAVA_HOME + v Path musi byt cesta do adresare bin)
+- Maven (musi byt v Path)
+
+Spustit:
+
+  build
+
+Jak vypnout:
+
+  CTRL + C
+  docker-compose down

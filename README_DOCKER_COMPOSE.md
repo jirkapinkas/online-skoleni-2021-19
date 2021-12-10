@@ -6,6 +6,11 @@ Je zapotrebi mit nainstalovane:
 - NodeJS
 - Yarn
 
+POZOR!!! Do eshop-frontend/.env.production je zapotrebi nastavit:
+
+  REACT_APP_API_URL=http://frontend.localhost/api
+
+
 Spustit:
 
   build

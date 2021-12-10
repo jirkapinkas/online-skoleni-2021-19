@@ -19,4 +19,4 @@ Pak funguje:
 Jak vypnout:
 
   CTRL + C
-  docker-compose down
+  docker-compose -f docker-compose-single.yml down

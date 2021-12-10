@@ -136,7 +136,7 @@
                                     <goal>yarn</goal>
                                 </goals>
                                 <configuration>
-                                    <arguments>build:single</arguments>
+                                    <arguments>build</arguments>
                                     <workingDirectory>../eshop-frontend/</workingDirectory>
                                 </configuration>
                             </execution>

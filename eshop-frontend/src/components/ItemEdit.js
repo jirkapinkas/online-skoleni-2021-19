@@ -1,3 +1,4 @@
+import { Button, Input } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
 
@@ -32,11 +33,13 @@ function ItemEdit(props) {
     return (
         <div>
             <form onSubmit={submitFormHandler}>
-                Name: <input type="text" value={name} onChange={nameChangedHandler} />
+                New Item:
                 <br />
-                Price: <input type="number" value={price} onChange={priceChangedHandler} />
+                <Input placeholder="Name" type="text" value={name} onChange={nameChangedHandler} />
                 <br />
-                <button>Save</button>
+                <Input placeholder="Price" type="number" value={price} onChange={priceChangedHandler} />
+                <br />
+                <Button type="submit" variant="outlined">Save</Button>
             </form>
         </div>
     )

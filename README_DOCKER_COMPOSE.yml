@@ -10,6 +10,16 @@ Spustit:
 
   build
 
+Dale je zapotrebi nastavit v /etc/hosts nebo C:\Windows\System32\Drivers\etc\hosts:
+(Tim se simuluje nastaveni u domeny):
+
+  127.0.0.1 frontend.localhost
+  127.0.0.1 backend.localhost
+
+Pak funguje:
+
+- http://frontend.localhost
+
 Jak vypnout:
 
   CTRL + C
